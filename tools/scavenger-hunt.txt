@@ -1,0 +1,29 @@
+Rebecca Fox
+
+1. For wired connections, enter ipconfig getifaddr en1 into the Terminal and your local IP will appear. For Wi-Fi, enter ipconfig getifaddr en0 and your local IP will appear. curl ifconfig.me shows the public IP.
+
+2. Use nslookup to find the IP address
+
+3. To get the hostname from the IP address, use the host utility (run host and then IP address) which queries the name server and provides you will the hostname of the IP address
+
+4. You can do this with the scp command, which uses the ssh protocol to copy files across machines. It extends the syntax of cp to allow references to other systems:
+
+5. Using the lsof command we can find the process ID (PID) for a specific port that is in a LISTEN state. In a terminal type the following and replace the “<port-number>” with our port number.
+
+lsof -nP -iTCP -sTCP:LISTEN | grep <port-number>
+
+To find the process that is listening to a port on Mac OS X, we'll use the lsof command to find the process ID (PID), and the ps command to show the name
+
+6. lsof -i 4tcp will list all processes with some sort of TCP IPv4 network sockets open
+
+7. curl -O [filenameURL] will retrieve and save a given web page in the current directory, use cd to navigate to desired directory
+
+8. Curl Command using the -I option will output only the Response Headers
+
+9. ? First install tcpflow from Ubuntu official repositories:
+
+sudo apt-get install tcpflow
+Then run this command to inspect all HTTP requests on standard port:
+
+sudo tcpflow -p -c port 80
+
